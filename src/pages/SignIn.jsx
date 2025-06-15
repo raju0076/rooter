@@ -29,9 +29,7 @@ const SignInForm = ({ setIsAuthenticated }) => {
       const data = await res.json();
 
       if (res.ok) {
-        toast.success(data.message || "Sign in successful",{
-          autoClose: 2000,
-        });
+       
         navigate("/"); 
         setFormData({ email: "", password: "" });
         setIsAuthenticated(true); 
